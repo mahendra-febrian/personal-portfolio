@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+/* || RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+    /* BORDERS */
+    --BORDER: 3px solid var(--COL);
+
+    /* COLORS */
+    --COL: #1e1e1e;
+}
+
+/* || UTILITY CLASSES */
+.gray {
+    color: #868e96;
+}
+
+/* || GENERAL STYLES */
+html {
+    font-size: 1.75rem;
+}
+
+body {
+    color: var(--COL);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+header {
+    border-bottom: 3px double var(--COL);
+    height: 16rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li::after {
+    content: " / ";
+    white-space: pre;
+}
+
+nav ul li:last-child::after {
+    content: " ";
+    white-space: normal;
+}
+
+li a {
+    color: var(--COL);
+}
+
+h1,
+h2,
+h3,
+footer p {
+    font-family: 'Gloria Hallelujah', script;
+    letter-spacing: .125rem;
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: .75rem;
+}
+
+header p:last-child {
+    margin-top: 0;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > section {
+    border-right: none;
+    border: var(--BORDER);
+    padding: 1rem;
+}
+
+main section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+main section:last-child ul li::before {
+    content: "- ";
+    white-space: pre;
+}
+
+main section section {
+    border-bottom: var(--BORDER);
+}
+
+main section section:last-child {
+    border-bottom: none;
+}
+
+a {
+    color: #1971c2;
+    font-size: .75rem;
+    text-decoration-line: none;
+}
+
+aside {
+    padding: 2rem;
+}
+
+aside section {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+aside article {
+    display: none;
+}
+
+aside article:first-child {
+    display: block;
+}
+
+aside article {
+    border-radius: 2rem;
+    border: var(--BORDER);
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+
+footer p {
+    text-align: center;
+}
+
+/* || MEDIA QUERIES */
+
+/* DESKTOP */
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    aside article {
+        display: block;
+    }
+}
